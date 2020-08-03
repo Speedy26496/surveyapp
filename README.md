@@ -1,3 +1,8 @@
+Name - Milind Naik    
+Roll Number - 1811042
+
+This project was created as a task given by company Dimentrix
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
