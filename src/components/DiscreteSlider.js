@@ -1,7 +1,5 @@
 import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from "@material-ui/core/styles";
-
 import Slider from '@material-ui/core/Slider';
 
 const classes = theme => ({
@@ -63,64 +61,14 @@ const marks = [
 class DiscreteSlider extends React.Component {
   constructor(props) {
     super(props);
-    // Don't call this.setState() here!
     this.state = {
       value: 0,
-      marks: [
-        {
-          value: 0,
-          label: '0',
-        },
-        {
-          value: 10,
-          label: '1',
-        },
-        {
-          value: 20,
-          label: '2',
-        },
-        {
-          value: 30,
-          label: '3',
-        },
-        {
-          value: 40,
-          label: '4',
-        },
-        {
-          value: 50,
-          label: '5',
-        },
-        {
-          value: 60,
-          label: '6',
-        },
-        {
-          value: 70,
-          label: '7',
-        },
-        {
-          value: 80,
-          label: '8',
-        },
-        {
-          value: 90,
-          label: '9',
-        },
-        {
-          value: 100,
-          label: '10',
-        }
-      ]
+      marks : marks
     };
 
-    // this.handleClick = this.handleClick.bind(this);
   }
   render() {
-    const { classes, quest, score, qno } = this.props;
-    const { value } = this.state;
-    // console.log('score slider', score, qno);
-    // export default function DiscreteSlider() {
+    const { classes, score, qno } = this.props;
 
     return (
       <div className={classes.root}>
@@ -130,10 +78,7 @@ class DiscreteSlider extends React.Component {
           marks={marks}
           value={score}
           onChange={(event, val) => {
-            //console.log(val)
             this.props.changeScore(qno, val)
-            //console.log('slider change', event.target.value, qno)
-
           }
           }
         />

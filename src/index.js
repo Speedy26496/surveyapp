@@ -8,7 +8,6 @@ import Result from "./components/Result";
 class Survey extends Component {
     constructor(props) {
         super(props);
-        // Don't call this.setState() here!
         this.state = {
         questionBank: [],
         score: 0,
@@ -18,7 +17,6 @@ class Survey extends Component {
         submit: false
     };
     this.changeScore=this.changeScore.bind(this);
-    // this.addUser=this.addUser.bind(this);
 }
     getQuestions = () => {
         this.setState({
@@ -64,7 +62,6 @@ class Survey extends Component {
     }
     changeScore(id, score){
         const {questionBank} = this.state
-        // console.log(questionBank, "state")
         var index = questionBank.findIndex(x=> x.id === id);
        console.log("index",questionBank[index], score)
        questionBank[index].score = score
@@ -72,7 +69,6 @@ class Survey extends Component {
        this.setState({
            questionBank
        })
-        // console.log("main", id, score);
     }
     render() {
         return (
@@ -88,7 +84,6 @@ class Survey extends Component {
                                 question={question.ques}
                                 score={question.score}
                                 changeScore= {this.changeScore}
-                            // selected={answer => this.computeAnswer(answer,correct)}
                             />
                         )
                     )}
